@@ -29,7 +29,7 @@ echo =================================
 echo  PC Gaming Redists AIO Installer
 echo  By HarryEffinPotter and Skrimix
 echo =================================
-echo NET / VC++ / XNA / 7Zip / DirectX
+echo DOTNET / VC++ / XNA / OpenAL / DirectX
 echo.
 echo Press any key to begin.
 pause > nul
