@@ -95,7 +95,7 @@ endlocal
 goto :finished
 
 :GET outer 
-echo Installing %1... 2>nul 
+echo Installing DOTNET %1... 2>nul 
 winget install -e --id %1 --accept-package-agreements --force 2>nul 1>nul
 goto :eol
 
@@ -113,14 +113,16 @@ echo ============================
 echo.
 Timeout /t 2 /nobreak 1>nul 2>nul
 REM Install some other loose ends.
-echo DirectX
+echo Installing DirectX
 winget install -e --id Microsoft.DirectX --accept-package-agreements  --force --silent 2>nul 1>nul
-echo XNA Framework Redistributable
+echo Installing XNA Framework Redistributable
 winget install -e --id Microsoft.XNARedist --accept-package-agreements --force --silent 2>nul 1>nul
-echo 7zip
-winget install -e --id 7zip.7zip --accept-package-agreements --force --silent 2>nul 1>nul
-echo Powershell
-winget install -e --id Microsoft.PowerShell --accept-package-agreements --force --silent 2>nul 1>nul
+:: echo Installing 7zip
+:: winget install -e --id 7zip.7zip --accept-package-agreements --force --silent 2>nul 1>nul
+:: echo Installing Powershell
+:: winget install -e --id Microsoft.PowerShell --accept-package-agreements --force --silent 2>nul 1>nul
+echo Installing OpenAL
+winget install -e --id=OpenAL.OpenAL --accept-package-agreements --force --silent 2>nul 1>nul
 Timeout /t 2 /nobreak 1>nul 2>nul
 
 cls
